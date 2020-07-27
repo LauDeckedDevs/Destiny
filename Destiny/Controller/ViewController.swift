@@ -84,9 +84,9 @@ class ViewController: UIViewController {
     func alertControl() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0)
         {
-        let alert = UIAlertController(title: "Story Finished", message: "This story is finished, do you want to restart?", preferredStyle: .alert)
-        let restartAction = UIAlertAction(title: "Restart", style: .default) {(UIAlertAction)
-        in self.restart()
+            let alert = UIAlertController(title: "Story finished", message: "This story is finished, do you want to restart?", preferredStyle: .actionSheet)
+            let restartAction = UIAlertAction(title: "Restart", style: .default) {(UIAlertAction)
+                in self.restart()
         }
         alert.addAction(restartAction)
         self.present(alert, animated: true, completion: nil)
